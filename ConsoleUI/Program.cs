@@ -3,6 +3,7 @@ using System.ComponentModel.Design;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
+using Entities.Concrete;
 
 namespace ConsoleUI
 {
@@ -10,8 +11,21 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            ProductManager productManager=new ProductManager(new EfProductDal());
+            var result = productManager.Add(new Product());
+            if (result.Success==true)
+            {
+                productManager.Add(new Product()
+                {
+                    ProductId = 78
 
-            ProductTest();
+                });
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+                //ProductTest();
             //CategoryTest();
 
         }

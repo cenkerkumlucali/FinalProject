@@ -19,7 +19,6 @@ namespace Core.DataAccess.EntityFramework
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
-                Console.WriteLine("{0} Eklendi.",addedEntity.Entity);
                 context.SaveChanges();
             }
         }
@@ -30,7 +29,6 @@ namespace Core.DataAccess.EntityFramework
             {
                 var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;
-                Console.WriteLine("Silindi.");
                 context.SaveChanges();
             }
         }
@@ -40,7 +38,6 @@ namespace Core.DataAccess.EntityFramework
             {
                 var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
-                Console.WriteLine("Güncellendi.");
                 context.SaveChanges();
             }
         }

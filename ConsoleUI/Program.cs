@@ -11,20 +11,25 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ProductManager productManager=new ProductManager(new EfProductDal());
-            var result = productManager.Add(new Product());
-            if (result.Success==true)
+            CustomerManager customerManager=new CustomerManager(new EfCustomerDal());
+            foreach (var customer in customerManager.GetAll().Data)
             {
-                productManager.Add(new Product()
-                {
-                    ProductId = 78
+                Console.WriteLine(customer.City);
+            }
+            //ProductManager productManager=new ProductManager(new EfProductDal());
+            //var result = productManager.Add(new Product());
+            //if (result.Success==true)
+            //{
+            //    productManager.Add(new Product()
+            //    {
+            //        ProductId = 78
 
-                });
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
+            //    });
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
                 //ProductTest();
             //CategoryTest();
 

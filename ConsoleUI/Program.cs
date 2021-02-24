@@ -11,11 +11,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CustomerManager customerManager=new CustomerManager(new EfCustomerDal());
-            foreach (var customer in customerManager.GetAll().Data)
-            {
-                Console.WriteLine(customer.City);
-            }
+            
             //ProductManager productManager=new ProductManager(new EfProductDal());
             //var result = productManager.Add(new Product());
             //if (result.Success==true)
@@ -38,7 +34,7 @@ namespace ConsoleUI
         private static void CategoryTest()
         {
             CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-            foreach (var category in categoryManager.GetAll())
+            foreach (var category in categoryManager.GetAll().Data)
             {
                 Console.WriteLine(category.CategoryName);
             }
@@ -47,21 +43,21 @@ namespace ConsoleUI
         private static void ProductTest()
         {
 
-            ProductManager productManager = new ProductManager(new EfProductDal());
-            var result = productManager.GetProductDetails();
-            if (result.Success == true)
-            {
+           //// ProductManager productManager = new ProductManager(new EfProductDal());
+           // //var result = productManager.GetProductDetails();
+           // if (result.Success == true)
+           // {
 
-                foreach (var product in result.Data)
-                {
-                    Console.WriteLine(product.ProductName + "/" + product.CategoryName);
-                }
+           //     foreach (var product in result.Data)
+           //     {
+           //         Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+           //     }
 
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
+           // }
+           // else
+           // {
+           //     Console.WriteLine(result.Message);
+           // }
 
 
         }

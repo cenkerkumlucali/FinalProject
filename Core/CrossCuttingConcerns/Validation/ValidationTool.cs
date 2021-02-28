@@ -1,8 +1,7 @@
-﻿using System;
+﻿using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using FluentValidation;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Core.CrossCuttingConcerns.Validation
 {

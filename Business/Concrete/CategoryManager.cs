@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Business.Abstract;
 using Core.Utilities.Results;
 using DataAccess.Abstract;

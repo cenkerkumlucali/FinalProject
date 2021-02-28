@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Core.Utilities.Results;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Core.Utilities.Results;
 
 namespace Core.Utilities.Business
 {
@@ -16,7 +16,10 @@ namespace Core.Utilities.Business
                     return logic;
                 }
             }
+
             return null;
         }
+
+
     }
 }

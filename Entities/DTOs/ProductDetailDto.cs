@@ -1,8 +1,4 @@
-﻿using Core;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Core.Entities;
+﻿using Core.Entities;
 
 namespace Entities.DTOs
 {

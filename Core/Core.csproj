@@ -1,8 +1,34 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\netstandard2.0\.NETStandard,Version=v2.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\netstandard2.0\Core.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netstandard2.0\Core.deps.json" />
+    <Content Include="obj\Core.csproj.nuget.dgspec.json" />
+    <Content Include="obj\Debug\netstandard2.0\Core.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netstandard2.0\Core.dll" />
+    <None Include="bin\Debug\netstandard2.0\Core.pdb" />
+    <None Include="obj\Core.csproj.nuget.g.props" />
+    <None Include="obj\Core.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netstandard2.0\Core.assets.cache" />
+    <None Include="obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\netstandard2.0\Core.dll" />
+    <None Include="obj\Debug\netstandard2.0\Core.pdb" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.1.0" />
@@ -10,6 +36,8 @@
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
     <PackageReference Include="FluentValidation" Version="9.5.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.11" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
   </ItemGroup>
 
 </Project>

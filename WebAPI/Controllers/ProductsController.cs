@@ -8,14 +8,14 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-         IProductService _productService;
+        IProductService _productService;
 
-         public ProductsController(IProductService productService)
-         {
-             _productService = productService;
-         }
+        public ProductsController(IProductService productService)
+        {
+            _productService = productService;
+        }
 
-         [HttpGet("getall")]
+        [HttpGet("getall")]
         public IActionResult GetAll()
         {
             var result = _productService.GetAll();
